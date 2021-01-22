@@ -1,12 +1,20 @@
 import React from 'react'
-import './assets/App.css'
+import styled from 'styled-components'
+import CharacterSheet from './components/CharacterSheet'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <h1>Hello, React</h1>
-    </div>
+    <Container>
+      <CharacterSheet />
+    </Container>
   )
 }
 
 export default App
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+  background-color: #282c34;
+`

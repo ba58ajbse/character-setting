@@ -1,4 +1,7 @@
+html { scroll-behavior: smooth; }
+
 body {
+  min-height: 100vh;
   margin: 0;
   font-family:
     -apple-system,
@@ -12,6 +15,8 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,4 +29,51 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd { margin: 0; }
+
+ul[role='list'],
+ol[role='list'] { list-style: none; }
+a:not([class]) { text-decoration-skip-ink: auto; }
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }

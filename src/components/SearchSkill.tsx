@@ -1,54 +1,40 @@
-import React, { useContext, useEffect } from 'react'
-import {
-  Table,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TableBody,
-  TableCell,
-} from '@material-ui/core'
-import TableCells from './TableCells'
-import { EditContext } from '../context/edit'
-
-const searchSkillInfo = [
-  { name: '医学', value: 3, correction: 2 },
-  { name: '聞き耳', value: 2, correction: 2 },
-]
+import React from 'react'
+import styled from 'styled-components'
 
 const SearchSkill: React.FC = () => {
-  const editState = useContext(EditContext)
-
-  useEffect(() => {
-    if (!editState.isEdit) {
-      const emptyObj = { name: '', value: 0, correction: 0 }
-      searchSkillInfo.push(emptyObj)
-    }
-  }, [editState.isEdit])
   return (
-    <>
-      <TableContainer>
-        <p>探索技能</p>
-        <Table className="search-skill">
-          <TableHead>
-            <TableRow>
-              <TableCell>名称</TableCell>
-              <TableCell align="center">レベル</TableCell>
-              <TableCell align="center">補正</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {searchSkillInfo.map((info) => {
-              return (
-                <TableRow key={info.name}>
-                  <TableCells info={info} />
-                </TableRow>
-              )
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </>
+    <SearchSkillWrap>
+      <p>探索技能</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>聞き耳</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>医学</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>魔法感知</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </SearchSkillWrap>
   )
 }
 
 export default SearchSkill
+
+const SearchSkillWrap = styled.div`
+  background-color: pink;
+  table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid;
+  }
+`

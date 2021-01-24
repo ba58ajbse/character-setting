@@ -2,8 +2,13 @@ import React from 'react'
 import { EditContext, useEdit } from '../context/edit'
 import BasicInfo from './BasicInfo'
 import BasicStatus from './BasicStatus'
+import Equipments from './Equipments'
+import Grace from './Grace'
 import Image from './Image'
+import Magic from './Magic'
 import MainStatus from './MainStatus'
+import SearchSkill from './SearchSkill'
+import Skill from './Skill'
 
 const CharacterSheet: React.FC = () => {
   const editState = useEdit()
@@ -16,11 +21,11 @@ const CharacterSheet: React.FC = () => {
         <Image />
         <BasicStatus />
         <MainStatus />
-        <div className="glace">恩寵</div>
-        <div className="search-skill">探索技能</div>
-        <div className="skill">スキル</div>
-        <div className="magic">魔法</div>
-        <div className="equipments">
+        <Grace />
+        <SearchSkill />
+        <Skill />
+        <Magic />
+        {/* <div className="equipments">
           装備
           <div className="weapon">武器</div>
           <div className="catalyst">触媒</div>
@@ -29,7 +34,8 @@ const CharacterSheet: React.FC = () => {
           <div className="ring">指輪</div>
           <div className="ornaments">装飾品</div>
           <div className="item">所持品</div>
-        </div>
+        </div> */}
+        <Equipments />
       </form>
     </EditContext.Provider>
   )

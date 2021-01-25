@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
+// import styled from 'styled-components'
 
 const Skill: React.FC = () => {
   return (
-    <SkillWrap>
+    <Grid item xs={12}>
       <p>スキル</p>
       <table>
         <thead>
@@ -33,17 +34,17 @@ const Skill: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </SkillWrap>
+    </Grid>
   )
 }
 
 export default Skill
 
-const SkillWrap = styled.div`
-  background-color: #ceceff;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid;
-  }
-`
+// const SkillWrap = styled.div`
+//   background-color: #ceceff;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid;
+//   }
+// `

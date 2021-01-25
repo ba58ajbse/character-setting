@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
+// import styled from 'styled-components'
 
 const Weapon: React.FC = () => {
   return (
-    <WeaponWrap>
+    <Grid item xs={6}>
       武器
       <table>
         <thead>
@@ -25,17 +26,17 @@ const Weapon: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </WeaponWrap>
+    </Grid>
   )
 }
 
 export default Weapon
 
-const WeaponWrap = styled.div`
-  background-color: #ac5e5e;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid;
-  }
-`
+// const WeaponWrap = styled.div`
+//   background-color: #ac5e5e;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid;
+//   }
+// `

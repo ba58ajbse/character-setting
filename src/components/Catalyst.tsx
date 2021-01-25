@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
+// import styled from 'styled-components'
 
 const Catalyst: React.FC = () => {
   return (
-    <CatalystWrap>
+    <Grid item xs={6}>
       触媒
       <table>
         <thead>
@@ -23,17 +24,17 @@ const Catalyst: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </CatalystWrap>
+    </Grid>
   )
 }
 
 export default Catalyst
 
-const CatalystWrap = styled.div`
-  background-color: #b284c6;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid;
-  }
-`
+// const CatalystWrap = styled.div`
+//   background-color: #b284c6;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid;
+//   }
+// `

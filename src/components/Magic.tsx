@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
+// import styled from 'styled-components'
 
 const Magic: React.FC = () => {
   return (
-    <MagicWrap>
+    <Grid item xs={12}>
       <p>魔法</p>
       <table>
         <thead>
@@ -38,17 +39,17 @@ const Magic: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </MagicWrap>
+    </Grid>
   )
 }
 
 export default Magic
 
-const MagicWrap = styled.div`
-  background-color: yellow;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid;
-  }
-`
+// const MagicWrap = styled.div`
+//   background-color: yellow;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid;
+//   }
+// `

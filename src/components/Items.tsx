@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
+// import styled from 'styled-components'
 
 const Items: React.FC = () => {
   return (
-    <ItemsWrap>
+    <Grid item xs={12}>
       所持品
       <table>
         <thead>
@@ -31,17 +32,17 @@ const Items: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </ItemsWrap>
+    </Grid>
   )
 }
 
 export default Items
 
-const ItemsWrap = styled.div`
-  background-color: #5e88ac;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid;
-  }
-`
+// const ItemsWrap = styled.div`
+//   background-color: #5e88ac;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid;
+//   }
+// `

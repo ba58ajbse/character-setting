@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
+// import styled from 'styled-components'
 
 const SearchSkill: React.FC = () => {
   return (
-    <SearchSkillWrap>
+    <Grid item xs={3}>
       <p>探索技能</p>
       <table>
         <tbody>
@@ -24,17 +25,17 @@ const SearchSkill: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </SearchSkillWrap>
+    </Grid>
   )
 }
 
 export default SearchSkill
 
-const SearchSkillWrap = styled.div`
-  background-color: pink;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid;
-  }
-`
+// const SearchSkillWrap = styled.div`
+//   background-color: pink;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid;
+//   }
+// `

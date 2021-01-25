@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
+// import styled from 'styled-components'
 
 const ShieldArmor: React.FC = () => {
   return (
-    <ShieldArmorWrap>
+    <Grid item xs={6}>
       盾
       <table>
         <thead>
@@ -38,17 +39,17 @@ const ShieldArmor: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </ShieldArmorWrap>
+    </Grid>
   )
 }
 
 export default ShieldArmor
 
-const ShieldArmorWrap = styled.div`
-  background-color: #74bdb6;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid;
-  }
-`
+// const ShieldArmorWrap = styled.div`
+//   background-color: #74bdb6;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid;
+//   }
+// `

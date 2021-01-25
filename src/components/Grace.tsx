@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
+// import styled from 'styled-components'
 
 const Grace: React.FC = () => {
   return (
-    <GraceWrap>
+    <Grid item xs={12}>
       <p>恩寵</p>
       <table>
         <tbody>
@@ -17,17 +18,17 @@ const Grace: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </GraceWrap>
+    </Grid>
   )
 }
 
 export default Grace
 
-const GraceWrap = styled.div`
-  background-color: #ffb76a;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid;
-  }
-`
+// const GraceWrap = styled.div`
+//   background-color: #ffb76a;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid;
+//   }
+// `

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Grid } from '@material-ui/core'
 import { EditContext, useEdit } from '../context/edit'
 import BasicInfo from './BasicInfo'
 import BasicStatus from './BasicStatus'
@@ -17,24 +18,16 @@ const CharacterSheet: React.FC = () => {
     <EditContext.Provider value={editState}>
       <form>
         <h1>キャラクターシート</h1>
-        <BasicInfo />
-        <Image />
-        <BasicStatus />
-        <MainStatus />
-        <Grace />
-        <SearchSkill />
-        <Skill />
-        <Magic />
-        {/* <div className="equipments">
-          装備
-          <div className="weapon">武器</div>
-          <div className="catalyst">触媒</div>
-          <div className="shield">盾</div>
-          <div className="armor">防具</div>
-          <div className="ring">指輪</div>
-          <div className="ornaments">装飾品</div>
-          <div className="item">所持品</div>
-        </div> */}
+        <Grid container spacing={3}>
+          <BasicInfo />
+          <Image />
+          <BasicStatus />
+          <MainStatus />
+          <SearchSkill />
+          <Grace />
+          <Skill />
+          <Magic />
+        </Grid>
         <Equipments />
       </form>
     </EditContext.Provider>

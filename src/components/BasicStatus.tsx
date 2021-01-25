@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
+import { Grid } from '@material-ui/core'
 
 const BasicStatus: React.FC = () => {
   return (
-    <StatusWrap>
+    <Grid item xs={3}>
       <p>基礎ステータス</p>
       <table>
         <tbody>
@@ -33,17 +34,17 @@ const BasicStatus: React.FC = () => {
           </tr>
         </tbody>
       </table>
-    </StatusWrap>
+    </Grid>
   )
 }
 
 export default BasicStatus
 
-const StatusWrap = styled.div`
-  background-color: #00cf00;
-  table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    border: 1px solid black;
-  }
-`
+// const StatusWrap = styled.div`
+//   background-color: #00cf00;
+//   table {
+//     table-layout: fixed;
+//     border-collapse: collapse;
+//     border: 1px solid black;
+//   }
+// `

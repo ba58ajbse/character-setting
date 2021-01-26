@@ -1,50 +1,59 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import { Grid } from '@material-ui/core'
+
+type StatusType = {
+  basicStatus: {
+    name: string
+    value: number
+  }[]
+}
+const status: StatusType = {
+  basicStatus: [
+    { name: '生命力', value: 10 },
+    { name: '精神力', value: 10 },
+    { name: '筋力', value: 10 },
+    { name: '技量', value: 10 },
+    { name: '神秘', value: 10 },
+    { name: '信仰', value: 10 },
+  ],
+}
 
 const BasicStatus: React.FC = () => {
   return (
     <Grid item xs={3}>
-      <p>基礎ステータス</p>
-      <table>
+      <StyledTable>
+        <StyledTableTitle>基礎ステータス</StyledTableTitle>
         <tbody>
-          <tr>
-            <td className="vitality">生命力</td>
-            <td className="vitality-value">10</td>
-          </tr>
-          <tr>
-            <td className="mental">精神力</td>
-            <td className="mental-value">10</td>
-          </tr>
-          <tr>
-            <td className="power">筋力</td>
-            <td className="power-value">10</td>
-          </tr>
-          <tr>
-            <td className="technique">技量</td>
-            <td className="technique-value">10</td>
-          </tr>
-          <tr>
-            <td className="mysteries">神秘</td>
-            <td className="mysteries-value">10</td>
-          </tr>
-          <tr>
-            <td className="faith">信仰</td>
-            <td className="faith-value">10</td>
-          </tr>
+          {status.basicStatus.map((st) => {
+            return (
+              <tr key={st.name}>
+                <th>{st.name}</th>
+                <td>{st.value}</td>
+              </tr>
+            )
+          })}
         </tbody>
-      </table>
+      </StyledTable>
     </Grid>
   )
 }
 
 export default BasicStatus
 
-// const StatusWrap = styled.div`
-//   background-color: #00cf00;
-//   table {
-//     table-layout: fixed;
-//     border-collapse: collapse;
-//     border: 1px solid black;
-//   }
-// `
+const StyledTableTitle = styled.caption`
+  font-size: 1.1rem;
+`
+const StyledTable = styled.table`
+  width: 80%;
+  border-collapse: collapse;
+  th {
+    font-weight: normal;
+  }
+  td,
+  th {
+    border-bottom: solid 1px;
+    padding: 8px;
+    text-align: center;
+  }
+`

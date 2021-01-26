@@ -1,66 +1,64 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-// import styled from 'styled-components'
+import styled from 'styled-components'
+
+type StatusType = {
+  mainStatus: {
+    name: string
+    value: number
+  }[]
+}
+
+const status: StatusType = {
+  mainStatus: [
+    { name: 'HP', value: 10 },
+    { name: 'MP', value: 10 },
+    { name: '移動', value: 2 },
+    { name: 'ダメージ修正', value: 8 },
+    { name: '命中修正', value: 12 },
+    { name: '魔力', value: 10 },
+    { name: '詠唱修正', value: 10 },
+    { name: '装甲', value: 4 },
+    { name: '魔法防御', value: 2 },
+    { name: 'ブロック', value: 1 },
+  ],
+}
 
 const MainStatus: React.FC = () => {
   return (
     <Grid item xs={3}>
-      <p>ステータス</p>
-      <table>
+      <StyledTable>
+        <StyledTableCaption>ステータス</StyledTableCaption>
         <tbody>
-          <tr>
-            <td>HP</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>MP</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>移動</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>ダメージ修正</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>命中修正</td>
-            <td>12</td>
-          </tr>
-          <tr>
-            <td>魔力</td>
-            <td>10</td>
-          </tr>
-          <tr>
-            <td>詠唱修正</td>
-            <td>9</td>
-          </tr>
-          <tr>
-            <td>装甲</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>魔法防御</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>ブロック</td>
-            <td>1</td>
-          </tr>
+          {status.mainStatus.map((st) => {
+            return (
+              <tr key={st.name}>
+                <th>{st.name}</th>
+                <td>{st.value}</td>
+              </tr>
+            )
+          })}
         </tbody>
-      </table>
+      </StyledTable>
     </Grid>
   )
 }
 
 export default MainStatus
 
-// const MainStatusWrap = styled.div`
-//   background-color: #9595ff;
-//   table {
-//     table-layout: fixed;
-//     border-collapse: collapse;
-//     border: 1px solid;
-//   }
-// `
+const StyledTableCaption = styled.caption`
+  font-size: 1.1rem;
+`
+const StyledTable = styled.table`
+  width: 80%;
+  border-collapse: collapse;
+  th {
+    font-weight: normal;
+  }
+  td,
+  th {
+    border-bottom: solid 1px;
+    padding: 8px;
+    text-align: center;
+  }
+`

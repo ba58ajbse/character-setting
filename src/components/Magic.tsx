@@ -1,12 +1,12 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-// import styled from 'styled-components'
+import { StyledTable, StyledTableCaption } from './styled-component/styled'
 
 const Magic: React.FC = () => {
   return (
     <Grid item xs={12}>
-      <p>魔法</p>
-      <table>
+      <StyledTable>
+        <StyledTableCaption>魔法</StyledTableCaption>
         <thead>
           <tr>
             <td>名称</td>
@@ -38,18 +38,9 @@ const Magic: React.FC = () => {
             <td>対象を威力1d6で回復する</td>
           </tr>
         </tbody>
-      </table>
+      </StyledTable>
     </Grid>
   )
 }
 
 export default Magic
-
-// const MagicWrap = styled.div`
-//   background-color: yellow;
-//   table {
-//     table-layout: fixed;
-//     border-collapse: collapse;
-//     border: 1px solid;
-//   }
-// `

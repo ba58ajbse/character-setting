@@ -10,6 +10,7 @@ import Magic from './Magic'
 import MainStatus from './MainStatus'
 import SearchSkill from './SearchSkill'
 import Skill from './Skill'
+import { StyledHr } from './styled-component/styled'
 
 const CharacterSheet: React.FC = () => {
   const editState = useEdit()
@@ -20,6 +21,7 @@ const CharacterSheet: React.FC = () => {
         <h1>キャラクターシート</h1>
         <Grid container spacing={3}>
           <BasicInfo />
+          <StyledHr />
           <Image />
           <BasicStatus />
           <MainStatus />

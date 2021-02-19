@@ -1,12 +1,12 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-// import styled from 'styled-components'
+import { StyledTable, StyledTableCaption } from './styled-component/styled'
 
 const Items: React.FC = () => {
   return (
     <Grid item xs={12}>
-      所持品
-      <table>
+      <StyledTable>
+        <StyledTableCaption>所持品</StyledTableCaption>
         <thead>
           <tr>
             <td>名称</td>
@@ -31,18 +31,9 @@ const Items: React.FC = () => {
             <td>汚染度を1にする</td>
           </tr>
         </tbody>
-      </table>
+      </StyledTable>
     </Grid>
   )
 }
 
 export default Items
-
-// const ItemsWrap = styled.div`
-//   background-color: #5e88ac;
-//   table {
-//     table-layout: fixed;
-//     border-collapse: collapse;
-//     border: 1px solid;
-//   }
-// `

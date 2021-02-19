@@ -1,12 +1,12 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-// import styled from 'styled-components'
+import { StyledTable, StyledTableCaption } from './styled-component/styled'
 
 const Weapon: React.FC = () => {
   return (
     <Grid item xs={6}>
-      武器
-      <table>
+      <StyledTable>
+        <StyledTableCaption>武器</StyledTableCaption>
         <thead>
           <tr>
             <td>名称</td>
@@ -25,18 +25,9 @@ const Weapon: React.FC = () => {
             <td />
           </tr>
         </tbody>
-      </table>
+      </StyledTable>
     </Grid>
   )
 }
 
 export default Weapon
-
-// const WeaponWrap = styled.div`
-//   background-color: #ac5e5e;
-//   table {
-//     table-layout: fixed;
-//     border-collapse: collapse;
-//     border: 1px solid;
-//   }
-// `

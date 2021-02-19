@@ -1,12 +1,12 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-// import styled from 'styled-components'
+import { StyledTable, StyledTableCaption } from './styled-component/styled'
 
 const Catalyst: React.FC = () => {
   return (
     <Grid item xs={6}>
-      触媒
-      <table>
+      <StyledTable>
+        <StyledTableCaption>触媒</StyledTableCaption>
         <thead>
           <tr>
             <td>名称</td>
@@ -23,18 +23,9 @@ const Catalyst: React.FC = () => {
             <td />
           </tr>
         </tbody>
-      </table>
+      </StyledTable>
     </Grid>
   )
 }
 
 export default Catalyst
-
-// const CatalystWrap = styled.div`
-//   background-color: #b284c6;
-//   table {
-//     table-layout: fixed;
-//     border-collapse: collapse;
-//     border: 1px solid;
-//   }
-// `

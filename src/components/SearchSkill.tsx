@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-import styled from 'styled-components'
+import { StyledTable, StyledTableCaption } from './styled-component/styled'
 
 type StatusType = {
   searchSkill: {
@@ -47,20 +47,3 @@ const SearchSkill: React.FC = () => {
 }
 
 export default SearchSkill
-
-const StyledTableCaption = styled.caption`
-  font-size: 1.1rem;
-`
-const StyledTable = styled.table`
-  width: 80%;
-  border-collapse: collapse;
-  th {
-    font-weight: normal;
-  }
-  td,
-  th {
-    border-bottom: solid 1px;
-    padding: 8px;
-    text-align: center;
-  }
-`

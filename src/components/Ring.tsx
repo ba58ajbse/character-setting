@@ -1,12 +1,12 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-// import styled from 'styled-components'
+import { StyledTable, StyledTableCaption } from './styled-component/styled'
 
 const Ring: React.FC = () => {
   return (
     <Grid item xs={6}>
-      指輪
-      <table>
+      <StyledTable>
+        <StyledTableCaption>指輪</StyledTableCaption>
         <thead>
           <tr>
             <td>名称</td>
@@ -23,18 +23,9 @@ const Ring: React.FC = () => {
             <td>HP +5</td>
           </tr>
         </tbody>
-      </table>
+      </StyledTable>
     </Grid>
   )
 }
 
 export default Ring
-
-// const RingWrap = styled.div`
-//   background-color: #ac5e5e;
-//   table {
-//     table-layout: fixed;
-//     border-collapse: collapse;
-//     border: 1px solid;
-//   }
-// `

@@ -1,5 +1,4 @@
 import React from 'react'
-// import styled from 'styled-components'
 import { Grid } from '@material-ui/core'
 
 const BasicInfo: React.FC = () => {
@@ -30,10 +29,3 @@ const BasicInfo: React.FC = () => {
 }
 
 export default BasicInfo
-
-// const InfoWrap = styled.div`
-//   background-color: #b3b3b3;
-//   input {
-//     border-bottom: 1px solid black;
-//   }
-// `

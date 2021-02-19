@@ -7,14 +7,23 @@ const Grace: React.FC = () => {
     <Grid item xs={12}>
       <StyledTable>
         <StyledTableCaption>恩寵</StyledTableCaption>
+        <thead>
+          <tr>
+            <td>タイプ</td>
+            <td>名称</td>
+            <td>効果</td>
+          </tr>
+        </thead>
         <tbody>
           <tr>
             <td>アクティブ</td>
             <td>アクティブ恩寵</td>
+            <td>アクティブ恩寵効果</td>
           </tr>
           <tr>
             <td>パッシブ</td>
             <td>パッシブの恩寵</td>
+            <td>パッシブ恩寵効果</td>
           </tr>
         </tbody>
       </StyledTable>

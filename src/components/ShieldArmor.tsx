@@ -6,7 +6,7 @@ const ShieldArmor: React.FC = () => {
   return (
     <Grid item xs={6}>
       <StyledTable>
-        <StyledTableCaption>盾</StyledTableCaption>
+        <StyledTableCaption>盾・防具</StyledTableCaption>
         <thead>
           <tr>
             <td>名称</td>
@@ -20,18 +20,6 @@ const ShieldArmor: React.FC = () => {
             <td>1</td>
             <td />
           </tr>
-        </tbody>
-      </StyledTable>
-      <StyledTable>
-        <StyledTableCaption>防具</StyledTableCaption>
-        <thead>
-          <tr>
-            <td>名称</td>
-            <td>装甲</td>
-            <td>備考</td>
-          </tr>
-        </thead>
-        <tbody>
           <tr>
             <td>魔術師のローブ</td>
             <td>2</td>

@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Grid } from '@material-ui/core'
+import { StyledTable, StyledTableCaption } from './styled-component/styled'
 
 type StatusType = {
   basicStatus: {
@@ -23,7 +23,7 @@ const BasicStatus: React.FC = () => {
   return (
     <Grid item xs={3}>
       <StyledTable>
-        <StyledTableTitle>基礎ステータス</StyledTableTitle>
+        <StyledTableCaption>基礎ステータス</StyledTableCaption>
         <tbody>
           {status.basicStatus.map((st) => {
             return (
@@ -40,20 +40,3 @@ const BasicStatus: React.FC = () => {
 }
 
 export default BasicStatus
-
-const StyledTableTitle = styled.caption`
-  font-size: 1.1rem;
-`
-const StyledTable = styled.table`
-  width: 80%;
-  border-collapse: collapse;
-  th {
-    font-weight: normal;
-  }
-  td,
-  th {
-    border-bottom: solid 1px;
-    padding: 8px;
-    text-align: center;
-  }
-`

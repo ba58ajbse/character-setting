@@ -21,7 +21,3 @@ const Container = styled(Grid)`
   color: black;
   align-items: 'center';
 `
-
-const style = {
-  padding: 10,
-}

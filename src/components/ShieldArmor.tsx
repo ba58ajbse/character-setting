@@ -1,12 +1,12 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-// import styled from 'styled-components'
+import { StyledTable, StyledTableCaption } from './styled-component/styled'
 
 const ShieldArmor: React.FC = () => {
   return (
     <Grid item xs={6}>
-      盾
-      <table>
+      <StyledTable>
+        <StyledTableCaption>盾</StyledTableCaption>
         <thead>
           <tr>
             <td>名称</td>
@@ -21,9 +21,9 @@ const ShieldArmor: React.FC = () => {
             <td />
           </tr>
         </tbody>
-      </table>
-      防具
-      <table>
+      </StyledTable>
+      <StyledTable>
+        <StyledTableCaption>防具</StyledTableCaption>
         <thead>
           <tr>
             <td>名称</td>
@@ -38,18 +38,9 @@ const ShieldArmor: React.FC = () => {
             <td>魔法D-2</td>
           </tr>
         </tbody>
-      </table>
+      </StyledTable>
     </Grid>
   )
 }
 
 export default ShieldArmor
-
-// const ShieldArmorWrap = styled.div`
-//   background-color: #74bdb6;
-//   table {
-//     table-layout: fixed;
-//     border-collapse: collapse;
-//     border: 1px solid;
-//   }
-// `

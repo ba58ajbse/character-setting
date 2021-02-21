@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import { Grid, Button } from '@material-ui/core'
 import { EditContext, useEdit } from '../context/edit'
 import BasicInfo from './BasicInfo'
 import BasicStatus from './BasicStatus'
@@ -11,6 +11,9 @@ import MainStatus from './MainStatus'
 import SearchSkill from './SearchSkill'
 import Skill from './Skill'
 import { StyledHr } from './styled-component/styled'
+import xmlbuilder from '../ZIP/xmlbuild'
+import save from '../ZIP/save'
+import data from '../data/status'
 
 const CharacterSheet: React.FC = () => {
   const editState = useEdit()
@@ -19,11 +22,17 @@ const CharacterSheet: React.FC = () => {
     <EditContext.Provider value={editState}>
       <form>
         <h1>キャラクターシート</h1>
+        <Button variant="contained" onClick={() => xmlbuilder(data)}>
+          保存する
+        </Button>
+        <Button variant="contained" onClick={() => save(data)}>
+          ファイルに保存
+        </Button>
         <Grid container spacing={3}>
           <BasicInfo />
           <StyledHr />
           <Image />
-          <BasicStatus />
+          <BasicStatus status={data.basicStatus} />
           <MainStatus />
           <SearchSkill />
           <Grace />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Grid, Button } from '@material-ui/core'
 import { EditContext, useEdit } from '../context/edit'
 import BasicInfo from './BasicInfo'
@@ -14,9 +14,11 @@ import { StyledHr } from './styled-component/styled'
 import xmlbuilder from '../ZIP/xmlbuild'
 import save from '../ZIP/save'
 import data from '../data/status'
+import { ImageStateType } from '../Interface/interface'
 
 const CharacterSheet: React.FC = () => {
   const editState = useEdit()
+  const [image, setImage] = useState<ImageStateType>()
 
   return (
     <EditContext.Provider value={editState}>
@@ -31,7 +33,7 @@ const CharacterSheet: React.FC = () => {
         <Grid container spacing={3}>
           <BasicInfo />
           <StyledHr />
-          <Image />
+          <Image image={image} setImage={setImage} />
           <BasicStatus status={data.basicStatus} />
           <MainStatus />
           <SearchSkill />

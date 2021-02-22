@@ -7,7 +7,7 @@ import { ImageStateType } from '../Interface/interface'
 
 type PropsType = {
   image: ImageStateType | undefined
-  setImage: React.Dispatch<React.SetStateAction<ImageStateType | undefined>>
+  setImage: React.Dispatch<React.SetStateAction<ImageStateType>>
 }
 
 const Image: React.FC<PropsType> = ({ image, setImage }) => {

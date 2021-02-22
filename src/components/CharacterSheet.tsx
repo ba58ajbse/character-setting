@@ -16,18 +16,28 @@ import save from '../ZIP/save'
 import data from '../data/status'
 import { ImageStateType } from '../Interface/interface'
 
+const initialImagteState: ImageStateType = {
+  file: undefined,
+  type: '',
+  url: '',
+  identifier: '',
+}
+
 const CharacterSheet: React.FC = () => {
   const editState = useEdit()
-  const [image, setImage] = useState<ImageStateType>()
+  const [image, setImage] = useState<ImageStateType>(initialImagteState)
 
   return (
     <EditContext.Provider value={editState}>
       <form>
         <h1>キャラクターシート</h1>
-        <Button variant="contained" onClick={() => xmlbuilder(data)}>
+        <Button
+          variant="contained"
+          onClick={() => xmlbuilder(data, image.identifier)}
+        >
           保存する
         </Button>
-        <Button variant="contained" onClick={() => save(data)}>
+        <Button variant="contained" onClick={() => save(data, image)}>
           ファイルに保存
         </Button>
         <Grid container spacing={3}>
